@@ -71,10 +71,21 @@ public class Student {
      * @param sID set student id
      */
     public void setId(String sID){
-        if(sID.length()==7)
-            id=sID;
-        else
+        if(sID.length()!=7)
             System.out.println("student id must have 7 digits");
+        else{
+            boolean isValid=true;
+            for(char c :sID.toCharArray()){
+                int askii =c;
+                if(askii<=30 || askii>=39){
+                    isValid=false;
+                    System.out.println("student The ID must consist of numbers only");
+                    return;
+                }
+            }
+            id=sID;
+        }
+
     }
 
     /**
