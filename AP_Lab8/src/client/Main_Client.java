@@ -18,7 +18,6 @@ public class Main_Client {
             System.out.println("enter your texts and enter \"EXIT\" to finish the process! ");
             String str;
             System.out.print("client->");
-
             while (true) {
                 str = scan.nextLine();
                 request.println(str);
