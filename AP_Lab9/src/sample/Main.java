@@ -15,7 +15,7 @@ public class Main extends Application {
         try {
             FXMLLoader loader = new FXMLLoader ( getClass().getResource( "calculator.fxml" ));
             Parent root = loader.load();
-            primaryStage.setScene(new Scene(root, 300, 275));
+            primaryStage.setScene(new Scene(root, 500, 325));
             primaryStage.show();
         } catch (IOException ex) {
             System.err.println(ex);
