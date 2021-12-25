@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-
 public class Main_Server {
     public static void main(String[] args) {
+        String inputs="";
         try (ServerSocket serverSocket = new ServerSocket(5000)) {
             Socket socket =serverSocket.accept();
             BufferedReader request = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -16,7 +16,8 @@ public class Main_Server {
             String requestStr;
             System.out.println("server is ON");
             while (!(requestStr= request.readLine()).equals("EXIT")) {
-                response.println("yor request is = \""+requestStr+"\"");
+                inputs+=requestStr+" ";
+                response.println(inputs);
             }
         } catch (IOException e) {
             e.printStackTrace();

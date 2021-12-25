@@ -20,6 +20,7 @@ public class Run {
 //        apLab.enrollStudent(std1);
 //        apLab.enrollStudent(std2);
 //        apLab.enrollStudent(std3);
+//        apLab.calculateAvg();
 //        apLab.print();
 
         Student std1 = new Student("ali","alavi","9931200");
@@ -40,14 +41,14 @@ public class Run {
         Student std5 = new Student("aida","mobli","9827042");
         Student std6 = new Student("saba","javadi","9925090");
 
-        Lab apLab2 = new Lab(4,"saterday");
+        Lab apLab2 = new Lab(4,"monday");
         apLab2.enrollStudent(std3);
         apLab2.enrollStudent(std4);
         apLab2.enrollStudent(std5);
         apLab2.enrollStudent(std6);
         apLab2.print();
 
-        Faculty ce = new Faculty("computer Engineering",5,3);
+        Faculty ce = new Faculty("computer Engineering",6,3);
         ce.enrollLab(apLab);
         ce.enrollLab(apLab2);
         ce.print();
